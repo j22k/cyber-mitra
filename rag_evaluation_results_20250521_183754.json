@@ -1,0 +1,79 @@
+{
+  "aggregate_metrics": {
+    "retrieval_precision": 1.0,
+    "retrieval_recall": 0.8,
+    "answer_relevance": 0.6500384076267084,
+    "answer_correctness": 0.6500384076267084,
+    "answer_completeness": 0.0,
+    "rouge_l_f1": 0.227485800815156,
+    "latency_seconds": 40.7164108,
+    "source_count": 4.0
+  },
+  "individual_results": [
+    {
+      "query": "What is the statute of limitations for personal injury claims?",
+      "metrics": {
+        "retrieval_precision": 1.0,
+        "retrieval_recall": 0.8,
+        "answer_relevance": 0.0,
+        "answer_correctness": 0.0,
+        "answer_completeness": 0.0,
+        "rouge_l_f1": 0.0,
+        "latency_seconds": 20.04884,
+        "source_count": 4
+      }
+    },
+    {
+      "query": "Explain how divorce proceedings work in family court.",
+      "metrics": {
+        "retrieval_precision": 1.0,
+        "retrieval_recall": 0.8,
+        "answer_relevance": 0.9145331803247013,
+        "answer_correctness": 0.9145331803247013,
+        "answer_completeness": 0.0,
+        "rouge_l_f1": 0.3090379008746356,
+        "latency_seconds": 71.365433,
+        "source_count": 4
+      }
+    },
+    {
+      "query": "What are my rights if I'm stopped by the police?",
+      "metrics": {
+        "retrieval_precision": 1.0,
+        "retrieval_recall": 0.8,
+        "answer_relevance": 0.8069394650081501,
+        "answer_correctness": 0.8069394650081501,
+        "answer_completeness": 0.0,
+        "rouge_l_f1": 0.39889196675900274,
+        "latency_seconds": 29.729503,
+        "source_count": 4
+      }
+    },
+    {
+      "query": "How do I file a small claims lawsuit?",
+      "metrics": {
+        "retrieval_precision": 1.0,
+        "retrieval_recall": 0.8,
+        "answer_relevance": 0.727665192909435,
+        "answer_correctness": 0.727665192909435,
+        "answer_completeness": 0.0,
+        "rouge_l_f1": 0.1761658031088083,
+        "latency_seconds": 45.785633,
+        "source_count": 4
+      }
+    },
+    {
+      "query": "What is the difference between a felony and a misdemeanor?",
+      "metrics": {
+        "retrieval_precision": 1.0,
+        "retrieval_recall": 0.8,
+        "answer_relevance": 0.8010541998912555,
+        "answer_correctness": 0.8010541998912555,
+        "answer_completeness": 0.0,
+        "rouge_l_f1": 0.25333333333333335,
+        "latency_seconds": 36.652645,
+        "source_count": 4
+      }
+    }
+  ]
+}
