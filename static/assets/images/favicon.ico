@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="16px" height="16px" viewBox="0 0 16 16" version="1.1">
+    <title>LexAI Favicon</title>
+    <g id="favicon" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <rect fill="#2D3748" x="0" y="0" width="16" height="16" rx="3"></rect>
+        <g id="scales" transform="translate(2.000000, 2.000000)" fill="#B69566">
+            <rect id="base" x="6" y="10" width="1" height="3"></rect>
+            <rect id="bottom" x="4" y="12" width="5" height="1" rx="0.5"></rect>
+            <rect id="pole" x="6.4" y="3" width="0.2" height="7"></rect>
+            <circle id="center" cx="6.5" cy="3" r="1"></circle>
+            <rect id="crossbar" x="1.5" y="2.8" width="10" height="0.4" rx="0.2"></rect>
+            
+            <g id="left-scale">
+                <line x1="1.5" y1="3" x2="3.5" y2="7" stroke="#B69566" stroke-width="0.3"></line>
+                <circle cx="3.5" cy="7" r="1.5"></circle>
+            </g>
+            
+            <g id="right-scale">
+                <line x1="11.5" y1="3" x2="9.5" y2="7" stroke="#B69566" stroke-width="0.3"></line>
+                <circle cx="9.5" cy="7" r="1.5"></circle>
+            </g>
+        </g>
+    </g>
+</svg>

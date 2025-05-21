@@ -1,0 +1,167 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 600" width="100%" height="auto">
+    <style>
+        .primary { fill: #2d3748; }
+        .secondary { fill: #8b4513; }
+        .accent { fill: #b69566; }
+        .light-accent { fill: #e4d4ba; }
+        .white { fill: #ffffff; }
+        .light-blue { fill: #90cdf4; }
+        .mid-blue { fill: #63b3ed; }
+        .dark-blue { fill: #4299e1; }
+        .glow { fill: #b69566; opacity: 0.15; filter: blur(20px); }
+        .text-path { fill: none; }
+    </style>
+    
+    <!-- Background glow -->
+    <circle class="glow" cx="400" cy="300" r="250"/>
+    
+    <!-- Brain circuit board -->
+    <g transform="translate(240, 100)">
+        <!-- Brain outline -->
+        <path class="primary" d="M260,180 C340,100 340,20 260,20 C180,20 180,100 260,180 Z M40,180 C-40,100 -40,20 40,20 C120,20 120,100 40,180 Z M150,300 C230,380 310,380 310,300 C310,220 230,220 150,300 Z M150,300 C70,380 -10,380 -10,300 C-10,220 70,220 150,300 Z M150,40 C200,0 250,0 300,40 L300,200 C250,240 200,240 150,200 Z M150,40 C100,0 50,0 0,40 L0,200 C50,240 100,240 150,200 Z" fill-opacity="0.9"/>
+        
+        <!-- Circuit lines -->
+        <path class="accent" d="M150,40 L150,200 M75,40 L75,200 M225,40 L225,200 M40,100 L260,100 M40,140 L260,140 M110,240 L190,240 M110,270 L190,270 M130,300 L170,300 M40,180 L40,270 M260,180 L260,270" stroke-width="2" fill="none" stroke="#b69566" stroke-linecap="round" stroke-dasharray="5,5"/>
+        
+        <!-- Circuit nodes -->
+        <circle class="accent" cx="150" cy="40" r="8"/>
+        <circle class="accent" cx="75" cy="40" r="6"/>
+        <circle class="accent" cx="225" cy="40" r="6"/>
+        <circle class="accent" cx="40" cy="100" r="6"/>
+        <circle class="accent" cx="260" cy="100" r="6"/>
+        <circle class="accent" cx="40" cy="140" r="6"/>
+        <circle class="accent" cx="260" cy="140" r="6"/>
+        <circle class="accent" cx="40" cy="180" r="8"/>
+        <circle class="accent" cx="260" cy="180" r="8"/>
+        <circle class="accent" cx="150" cy="200" r="8"/>
+        <circle class="accent" cx="110" cy="240" r="6"/>
+        <circle class="accent" cx="190" cy="240" r="6"/>
+        <circle class="accent" cx="110" cy="270" r="6"/>
+        <circle class="accent" cx="190" cy="270" r="6"/>
+        <circle class="accent" cx="40" cy="270" r="6"/>
+        <circle class="accent" cx="260" cy="270" r="6"/>
+        <circle class="accent" cx="150" cy="300" r="8"/>
+        
+        <!-- Digital code paths -->
+        <path class="text-path" id="path1" d="M40,100 C100,80 200,120 260,100"/>
+        <path class="text-path" id="path2" d="M40,140 C100,160 200,120 260,140"/>
+        <path class="text-path" id="path3" d="M110,240 C130,230 170,250 190,240"/>
+        
+        <!-- Binary code -->
+        <text class="white" font-family="monospace" font-size="10">
+            <textPath href="#path1">10110101 01101001 11001010 10101</textPath>
+        </text>
+        <text class="white" font-family="monospace" font-size="10">
+            <textPath href="#path2">01011010 10101011 01010100 10101</textPath>
+        </text>
+        <text class="white" font-family="monospace" font-size="10">
+            <textPath href="#path3">11010101 01010101 10101010</textPath>
+        </text>
+    </g>
+    
+    <!-- Scales of Justice -->
+    <g transform="translate(530, 200) scale(0.8)">
+        <!-- Base -->
+        <rect class="accent" x="70" y="110" width="10" height="30"/>
+        <rect class="accent" x="40" y="140" width="70" height="10" rx="2"/>
+        
+        <!-- Center Pole -->
+        <rect class="accent" x="74" y="40" width="2" height="70"/>
+        
+        <!-- Center Piece -->
+        <circle class="accent" cx="75" cy="40" r="8"/>
+        <circle class="light-accent" cx="75" cy="40" r="5"/>
+        
+        <!-- Cross Bar -->
+        <rect class="accent" x="25" y="35" width="100" height="5" rx="2"/>
+        
+        <!-- Left Scale -->
+        <line class="accent" x1="25" y1="37.5" x2="45" y2="85" stroke="#b69566" stroke-width="2"/>
+        <circle class="primary" cx="45" cy="85" r="20" opacity="0.9"/>
+        <circle class="accent" cx="45" cy="85" r="18" opacity="0.8"/>
+        <circle class="light-accent" cx="45" cy="85" r="15" opacity="0.7"/>
+        
+        <!-- Right Scale -->
+        <line class="accent" x1="125" y1="37.5" x2="105" y2="85" stroke="#b69566" stroke-width="2"/>
+        <circle class="primary" cx="105" cy="85" r="20" opacity="0.9"/>
+        <circle class="accent" cx="105" cy="85" r="18" opacity="0.8"/>
+        <circle class="light-accent" cx="105" cy="85" r="15" opacity="0.7"/>
+        
+        <!-- AI Icons in scales -->
+        <text x="38" y="90" font-family="Arial" font-size="14" font-weight="bold" fill="#2d3748">AI</text>
+        <text x="96" y="90" font-family="Arial" font-size="14" font-weight="bold" fill="#2d3748">LAW</text>
+    </g>
+    
+    <!-- Legal document stack -->
+    <g transform="translate(120, 350) scale(0.9)">
+        <!-- Documents -->
+        <rect class="white" x="0" y="20" width="120" height="160" rx="5"/>
+        <rect class="light-accent" x="10" y="10" width="120" height="160" rx="5"/>
+        <rect class="white" x="20" y="0" width="120" height="160" rx="5"/>
+        
+        <!-- Document lines -->
+        <line x1="40" y1="30" x2="120" y2="30" stroke="#2d3748" stroke-width="2" opacity="0.3"/>
+        <line x1="40" y1="50" x2="120" y2="50" stroke="#2d3748" stroke-width="2" opacity="0.3"/>
+        <line x1="40" y1="70" x2="120" y2="70" stroke="#2d3748" stroke-width="2" opacity="0.3"/>
+        <line x1="40" y1="90" x2="120" y2="90" stroke="#2d3748" stroke-width="2" opacity="0.3"/>
+        <line x1="40" y1="110" x2="120" y2="110" stroke="#2d3748" stroke-width="2" opacity="0.3"/>
+        <line x1="40" y1="130" x2="120" y2="130" stroke="#2d3748" stroke-width="2" opacity="0.3"/>
+        
+        <!-- Magnifying Glass -->
+        <circle class="light-blue" cx="50" cy="60" r="30" opacity="0.3"/>
+        <circle class="light-blue" cx="50" cy="60" r="25" fill="none" stroke="#2d3748" stroke-width="3"/>
+        <line x1="68" y1="78" x2="85" y2="95" stroke="#2d3748" stroke-width="4" stroke-linecap="round"/>
+    </g>
+    
+    <!-- Data Streams -->
+    <g opacity="0.7">
+        <!-- Stream 1 -->
+        <path class="accent" d="M200,150 C250,100 300,200 350,150 C400,100 450,200 500,150" fill="none" stroke="#b69566" stroke-width="2" stroke-dasharray="5,5"/>
+        
+        <!-- Stream 2 -->
+        <path class="accent" d="M100,400 C150,450 200,350 250,400 C300,450 350,350 400,400 C450,450 500,350 550,400" fill="none" stroke="#b69566" stroke-width="2" stroke-dasharray="5,5"/>
+        
+        <!-- Stream 3 -->
+        <path class="accent" d="M650,250 C600,300 550,200 500,250 C450,300 400,200 350,250" fill="none" stroke="#b69566" stroke-width="2" stroke-dasharray="5,5"/>
+        
+        <!-- Data points -->
+        <circle class="light-accent" cx="200" cy="150" r="5"/>
+        <circle class="light-accent" cx="350" cy="150" r="5"/>
+        <circle class="light-accent" cx="500" cy="150" r="5"/>
+        
+        <circle class="light-accent" cx="100" cy="400" r="5"/>
+        <circle class="light-accent" cx="250" cy="400" r="5"/>
+        <circle class="light-accent" cx="400" cy="400" r="5"/>
+        <circle class="light-accent" cx="550" cy="400" r="5"/>
+        
+        <circle class="light-accent" cx="650" cy="250" r="5"/>
+        <circle class="light-accent" cx="500" cy="250" r="5"/>
+        <circle class="light-accent" cx="350" cy="250" r="5"/>
+    </g>
+    
+    <!-- Cyber Mitra Text -->
+    <g transform="translate(550, 400)">
+        <text x="0" y="0" font-family="Arial" font-size="24" font-weight="bold" fill="#b69566">CYBER MITRA</text>
+        <text x="0" y="30" font-family="Arial" font-size="16" fill="#e4d4ba">AI-Powered Legal Assistant</text>
+    </g>
+    
+    <!-- Animated Elements -->
+    <g>
+        <!-- Floating particles -->
+        <circle class="accent" cx="150" cy="100" r="3">
+            <animate attributeName="cy" from="100" to="110" dur="3s" repeatCount="indefinite" />
+        </circle>
+        <circle class="accent" cx="650" cy="350" r="3">
+            <animate attributeName="cy" from="350" to="340" dur="2.5s" repeatCount="indefinite" />
+        </circle>
+        <circle class="accent" cx="350" cy="450" r="3">
+            <animate attributeName="cy" from="450" to="460" dur="4s" repeatCount="indefinite" />
+        </circle>
+        <circle class="accent" cx="550" cy="150" r="3">
+            <animate attributeName="cy" from="150" to="140" dur="3.5s" repeatCount="indefinite" />
+        </circle>
+        <circle class="accent" cx="200" cy="300" r="3">
+            <animate attributeName="cy" from="300" to="310" dur="2.7s" repeatCount="indefinite" />
+        </circle>
+    </g>
+</svg>

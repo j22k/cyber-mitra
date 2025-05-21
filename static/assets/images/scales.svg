@@ -1,0 +1,33 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 150 150">
+    <title>Scales of Justice</title>
+    <style>
+        .gold { fill: #b69566; }
+        .dark { fill: #2d3748; }
+        .highlight { fill: #e4d4ba; }
+    </style>
+    <!-- Base -->
+    <rect class="dark" x="70" y="110" width="10" height="30"/>
+    <rect class="gold" x="40" y="140" width="70" height="10" rx="2"/>
+    
+    <!-- Center Pole -->
+    <rect class="gold" x="74" y="40" width="2" height="70"/>
+    
+    <!-- Center Piece -->
+    <circle class="gold" cx="75" cy="40" r="8"/>
+    <circle class="highlight" cx="75" cy="40" r="5"/>
+    
+    <!-- Cross Bar -->
+    <rect class="gold" x="25" y="35" width="100" height="5" rx="2"/>
+    
+    <!-- Left Scale -->
+    <line class="gold" x1="25" y1="37.5" x2="45" y2="85" stroke="#b69566" stroke-width="2"/>
+    <circle class="dark" cx="45" cy="85" r="20" opacity="0.9"/>
+    <circle class="gold" cx="45" cy="85" r="18" opacity="0.8"/>
+    <circle class="highlight" cx="45" cy="85" r="15" opacity="0.7"/>
+    
+    <!-- Right Scale -->
+    <line class="gold" x1="125" y1="37.5" x2="105" y2="85" stroke="#b69566" stroke-width="2"/>
+    <circle class="dark" cx="105" cy="85" r="20" opacity="0.9"/>
+    <circle class="gold" cx="105" cy="85" r="18" opacity="0.8"/>
+    <circle class="highlight" cx="105" cy="85" r="15" opacity="0.7"/>
+</svg>

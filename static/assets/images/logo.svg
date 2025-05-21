@@ -1,0 +1,38 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 50 50">
+    <title>LexAI Logo</title>
+    <style>
+        .gold { fill: #b69566; }
+        .dark { fill: #2d3748; }
+    </style>
+    
+    <!-- Background Circle -->
+    <circle cx="25" cy="25" r="23" class="dark"/>
+    <circle cx="25" cy="25" r="21" fill="none" stroke="#b69566" stroke-width="0.5"/>
+    
+    <!-- Scales of Justice Icon -->
+    <g transform="translate(12.5, 12.5) scale(0.5)">
+        <!-- Base -->
+        <rect class="gold" x="22" y="40" width="6" height="15"/>
+        <rect class="gold" x="15" y="55" width="20" height="5" rx="1"/>
+        
+        <!-- Center Pole -->
+        <rect class="gold" x="24" y="15" width="2" height="25"/>
+        
+        <!-- Center Piece -->
+        <circle class="gold" cx="25" cy="15" r="5"/>
+        <circle fill="#FFFFFF" opacity="0.3" cx="25" cy="15" r="3"/>
+        
+        <!-- Cross Bar -->
+        <rect class="gold" x="5" y="13" width="40" height="4" rx="1"/>
+        
+        <!-- Left Scale -->
+        <line class="gold" x1="5" y1="15" x2="15" y2="35" stroke="#b69566" stroke-width="2"/>
+        <circle class="gold" cx="15" cy="35" r="8"/>
+        <circle fill="#FFFFFF" opacity="0.2" cx="15" cy="35" r="6"/>
+        
+        <!-- Right Scale -->
+        <line class="gold" x1="45" y1="15" x2="35" y2="35" stroke="#b69566" stroke-width="2"/>
+        <circle class="gold" cx="35" cy="35" r="8"/>
+        <circle fill="#FFFFFF" opacity="0.2" cx="35" cy="35" r="6"/>
+    </g>
+</svg>

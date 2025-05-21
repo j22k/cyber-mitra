@@ -1,0 +1,179 @@
+/* GLOBAL STYLES AND VARIABLES */
+:root {
+    --primary-color: #2d3748;
+    --secondary-color: #8b4513;
+    --accent-color: #b69566;
+    --light-accent: #e4d4ba;
+    --dark-bg: #1a202c;
+    --text-color: #333;
+    --light-text: #f7f7f7;
+    --shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    --transition: all 0.3s ease;
+    --border-radius: 8px;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+    background-color: #f8f9fa;
+    color: var(--text-color);
+    overflow-x: hidden;
+}
+
+/* ANIMATIONS */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes slideUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes typingAnimation {
+    0%, 100% {
+        transform: scale(1);
+        opacity: 0.6;
+    }
+    50% {
+        transform: scale(1.2);
+        opacity: 1;
+    }
+}
+
+@keyframes float {
+    0%, 100% {
+        transform: translateY(0) rotate(0deg);
+    }
+    50% {
+        transform: translateY(-15px) rotate(5deg);
+    }
+}
+
+/* Common Button Styles */
+.btn {
+    padding: 0.8rem 2rem;
+    border: none;
+    border-radius: var(--border-radius);
+    font-size: 1rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: var(--transition);
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.btn-primary {
+    background-color: var(--accent-color);
+    color: var(--primary-color);
+}
+
+.btn-primary:hover {
+    background-color: #a68657;
+    transform: translateY(-3px);
+}
+
+.btn-secondary {
+    background-color: transparent;
+    border: 2px solid var(--accent-color);
+    color: var(--accent-color);
+}
+
+.btn-secondary:hover {
+    background-color: rgba(182, 149, 102, 0.1);
+    transform: translateY(-3px);
+}
+
+/* DARK MODE STYLES */
+.dark-mode {
+    --primary-color: #1a1a2e;
+    --text-color: #e6e6e6;
+    --light-text: #f7f7f7;
+    --dark-bg: #0f0f1b;
+}
+
+.dark-mode body {
+    background-color: #121212;
+}
+
+.dark-mode .login-form {
+    background: rgba(30, 30, 46, 0.9);
+}
+
+.dark-mode .form-input {
+    background-color: rgba(30, 30, 46, 0.8);
+    border-color: #333;
+    color: var(--light-text);
+}
+
+.dark-mode .chat-header,
+.dark-mode .chat-input-wrapper {
+    background-color: #1e1e2e;
+    border-color: #333;
+}
+
+.dark-mode .message-content {
+    background-color: #1e1e2e;
+    color: var(--light-text);
+}
+
+.dark-mode .message:not(.outgoing) .message-content::before {
+    border-color: transparent #1e1e2e transparent transparent;
+}
+
+.dark-mode .main-chat {
+    background-color: #121212;
+}
+
+.dark-mode .action-btn,
+.dark-mode .input-action-btn {
+    color: #9ca3af;
+}
+
+.dark-mode .action-btn:hover,
+.dark-mode .input-action-btn:hover {
+    background-color: #262626;
+}
+
+.dark-mode .feature-card {
+    background-color: #1e1e2e;
+}
+
+.dark-mode .welcome-title {
+    color: var(--light-text);
+}
+
+.dark-mode .feature-title {
+    color: var(--light-text);
+}
+
+.dark-mode .feature-desc,
+.dark-mode .welcome-text {
+    color: #9ca3af;
+}
+
+.dark-mode .chat-input {
+    color: var(--light-text);
+}
+
+.dark-mode .typing-indicator {
+    background-color: #1e1e2e;
+    color: #9ca3af;
+}

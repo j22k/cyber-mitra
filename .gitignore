@@ -1,0 +1,21 @@
+# Python
+__pycache__/
+*.py[cod]
+*.class
+*.so
+.Python
+env/
+build/
+dist/
+*.egg-info/
+.env
+.venv
+venv/
+
+# IDE
+.vscode/
+.idea/
+
+# Project specific
+rag_evaluation_charts.png
+rag_evaluation_report.md

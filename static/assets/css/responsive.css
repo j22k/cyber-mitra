@@ -1,0 +1,110 @@
+/* RESPONSIVE STYLES */
+@media (max-width: 1024px) {
+    .hero {
+        flex-direction: column;
+    }
+
+    .hero-content, .login-container {
+        width: 100%;
+    }
+
+    .hero-content {
+        padding: 3rem;
+        text-align: center;
+        align-items: center;
+    }
+
+    .scales-3d, .book-stack-3d {
+        display: none;
+    }
+    
+    .features-grid {
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    }
+}
+
+@media (max-width: 768px) {
+    .nav-container {
+        padding: 1rem;
+    }
+
+    .hero-content {
+        padding: 2rem 1rem;
+    }
+
+    .hero-title {
+        font-size: 2.5rem;
+    }
+
+    .sidebar {
+        position: fixed;
+        left: -300px;
+        z-index: 100;
+        height: 100vh;
+    }
+
+    .sidebar.active {
+        left: 0;
+    }
+
+    .menu-toggle {
+        display: block;
+    }
+
+    .message {
+        max-width: 90%;
+    }
+    
+    .features-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media (max-width: 480px) {
+    .hero-btns {
+        flex-direction: column;
+    }
+
+    .login-form {
+        padding: 1.5rem;
+    }
+
+    .form-title {
+        font-size: 1.5rem;
+    }
+
+    .nav-links {
+        display: none;
+    }
+    
+    .message {
+        max-width: 95%;
+    }
+    
+    .message-avatar {
+        width: 32px;
+        height: 32px;
+        font-size: 0.8rem;
+    }
+    
+    .chat-header {
+        padding: 0.8rem;
+    }
+    
+    .chat-input-container {
+        padding: 0.8rem;
+    }
+    
+    .action-btn, .input-action-btn {
+        width: 32px;
+        height: 32px;
+    }
+    
+    .welcome-title {
+        font-size: 1.8rem;
+    }
+    
+    .welcome-text {
+        font-size: 1rem;
+    }
+}

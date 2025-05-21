@@ -1,0 +1,441 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cyber Mitra - Your AI-Powered Legal Assistant</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="{{ url_for('static', filename='assets/css/main.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='assets/css/landing.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='assets/css/chat.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='assets/css/responsive.css') }}">
+    <link rel="shortcut icon" href="{{ url_for('static', filename='assets/images/favicon.ico') }}" type="image/x-icon">
+</head>
+<body>
+    <!-- LANDING PAGE -->
+    <div class="landing-container" id="landing-page">
+        <!-- Navigation -->
+        <div class="nav-container">
+            <div class="logo">
+                <i class="fas fa-scale-balanced"></i>
+                <span>Cyber Mitra</span>
+            </div>
+            <div class="nav-links">
+                <a href="#" class="nav-link">Home</a>
+                <a href="{{ url_for('static', filename='about.html') }}" class="nav-link">About</a>
+            </div>
+        </div>
+
+        <!-- Hero Section -->
+        <div class="hero">
+            <div class="hero-content">
+                <h1 class="hero-title">Your Personal <span>Legal Assistant</span> Powered by AI</h1>
+                <p class="hero-subtitle">Get instant legal guidance, understand laws and procedures, and find relevant legal provisions through natural conversation.</p>
+                <div class="hero-btns">
+                    <button class="btn btn-secondary">
+                        <i class="fas fa-info-circle"></i>
+                        Learn More 
+                    </button>
+                    <div class="login-tab active" id="login-tab">Login</div>
+                    <div class="login-tab" id="signup-tab">Sign Up</div>
+                </div>
+            </div>
+
+            <div class="login-container">
+                <style>
+                    .login-tabs {
+                        display: flex;
+                        margin-bottom: 1.5rem;
+                        border-bottom: 2px solid rgba(182, 149, 102, 0.2);
+                    }
+                    
+                    .login-tab {
+                        flex: 1;
+                        text-align: center;
+                        padding: 0.75rem 0;
+                        font-weight: 600;
+                        cursor: pointer;
+                        color: #777;
+                        transition: var(--transition);
+                    }
+                    
+                    .login-tab.active {
+                        color: var(--accent-color);
+                        border-bottom: 3px solid var(--accent-color);
+                        margin-bottom: -2px;
+                    }
+                    
+                    .forgot-password {
+                        color: var(--accent-color);
+                        text-decoration: none;
+                        font-size: 0.9rem;
+                        transition: var(--transition);
+                    }
+                    
+                    .forgot-password:hover {
+                        text-decoration: underline;
+                    }
+                    
+                    .dark-mode .login-tabs {
+                        border-bottom-color: #333;
+                    }
+                    
+                    .dark-mode .login-tab.active {
+                        color: var(--light-accent);
+                        border-bottom-color: var(--light-accent);
+                    }
+                    
+                    .dark-mode .forgot-password {
+                        color: var(--light-accent);
+                    }
+                </style>
+                
+                <!-- <div class="login-tabs">
+                    <div class="login-tab active" id="login-tab">Login</div>
+                    <div class="login-tab" id="signup-tab">Sign Up</div>
+                </div> -->
+                
+                <!-- Login Form -->
+                <form class="login-form" id="login-form" action="/login" method="POST">
+                    <h2 class="form-title">Log in to Cyber Mitra</h2>
+                    <div class="form-group">
+                        <label for="email" class="form-label">Email</label>
+                        <input type="email" name="email" id="email" class="form-input" placeholder="Enter your email" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="password" class="form-label">Password</label>
+                        <input type="password" name="password" id="password" class="form-input" placeholder="Enter your password" required>
+                    </div>
+                    <div class="form-footer">
+                        <div class="checkbox-container">
+                            <input type="checkbox" id="remember">
+                            <label for="remember">Remember me</label>
+                        </div>
+                        <a href="#" class="forgot-password">Forgot password?</a>
+                    </div>
+                    <button type="submit" class="submit-btn">Login</button>
+                </form>
+                
+                <!-- Signup Form -->
+                <form class="login-form" id="signup-form" style="display: none;" action="/register" method="POST">   
+                    <h2 class="form-title">Sign up for Cyber Mitra</h2>
+                    <div class="form-group">
+                        <label for="signup-name" class="form-label">Full Name</label>
+                        <input type="text" id="signup-name" name="Fullname" class="form-input" placeholder="Enter your full name" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="signup-email" class="form-label">Email</label>
+                        <input type="email" id="signup-email" name="email" class="form-input" placeholder="Enter your email" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="signup-password" class="form-label">Password</label>
+                        <input type="password" id="signup-password" name="password" class="form-input" placeholder="Create a password" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="signup-confirm" class="form-label">Confirm Password</label>
+                        <input type="password" id="signup-confirm" name="Confirm_password" class="form-input" placeholder="Confirm your password" required>
+                    </div>
+                    <div class="form-footer">
+                        <div class="checkbox-container">
+                            <input type="checkbox" id="terms">
+                            <label for="terms">I agree to the Terms of Service</label>
+                        </div>
+                    </div>
+                    <button type="submit" class="submit-btn">Create Account</button>
+                </form>
+            </div>
+
+            <!-- 3D Elements -->
+            <div class="scales-3d">
+                <img src="{{ url_for('static', filename='assets/images/scales.svg') }}" alt="Scales of Justice">
+            </div>
+            <div class="book-stack-3d">
+                <img src="{{ url_for('static', filename='assets/images/law-books.svg') }}" alt="Law Books">
+            </div>
+        </div>
+    </div>
+    
+    <!-- Learn More Modal -->
+    <div class="modal-overlay" id="learn-more-modal">
+        <div class="modal">
+            <div class="modal-header">
+                <div class="modal-title">
+                    <i class="fas fa-scale-balanced"></i>
+                    <span>About Cyber Mitra</span>
+                </div>
+                <button class="modal-close" id="modal-close">
+                    <i class="fas fa-times"></i>
+                </button>
+            </div>
+            <div class="modal-body">
+                <div class="modal-section">
+                    <h3 class="modal-section-title">
+                        <i class="fas fa-info-circle"></i>
+                        <span>What is Cyber Mitra?</span>
+                    </h3>
+                    <p>Cyber Mitra is an AI-powered legal assistant designed to help users understand legal procedures and find relevant laws through natural conversation. Our system uses state-of-the-art large language models fine-tuned on extensive legal datasets to provide accurate information and guidance.</p>
+                </div>
+                
+                <div class="modal-section">
+                    <h3 class="modal-section-title">
+                        <i class="fas fa-star"></i>
+                        <span>Key Features</span>
+                    </h3>
+                    <ul class="feature-list">
+                        <li class="feature-item">
+                            <div class="feature-icon">
+                                <i class="fas fa-comments"></i>
+                            </div>
+                            <div class="feature-content">
+                                <div class="feature-title">Natural Conversation</div>
+                                <div class="feature-desc">Ask legal questions in your own words without needing to use specific legal terminology.</div>
+                            </div>
+                        </li>
+                        <li class="feature-item">
+                            <div class="feature-icon">
+                                <i class="fas fa-search"></i>
+                            </div>
+                            <div class="feature-content">
+                                <div class="feature-title">Web Search Integration</div>
+                                <div class="feature-desc">Access the latest legal information with our integrated web search functionality.</div>
+                            </div>
+                        </li>
+                        <li class="feature-item">
+                            <div class="feature-icon">
+                                <i class="fas fa-book-open"></i>
+                            </div>
+                            <div class="feature-content">
+                                <div class="feature-title">Comprehensive Legal Database</div>
+                                <div class="feature-desc">Built on over 8,500 legal query-answer pairs covering a wide range of legal topics and jurisdictions.</div>
+                            </div>
+                        </li>
+                        <li class="feature-item">
+                            <div class="feature-icon">
+                                <i class="fas fa-history"></i>
+                            </div>
+                            <div class="feature-content">
+                                <div class="feature-title">Conversation History</div>
+                                <div class="feature-desc">Save and revisit your legal inquiries anytime with organized chat history.</div>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+                
+                <div class="modal-section">
+                    <h3 class="modal-section-title">
+                        <i class="fas fa-users"></i>
+                        <span>Who Can Use Cyber Mitra?</span>
+                    </h3>
+                    <ul class="feature-list">
+                        <li class="feature-item">
+                            <div class="feature-icon">
+                                <i class="fas fa-user"></i>
+                            </div>
+                            <div class="feature-content">
+                                <div class="feature-title">General Public</div>
+                                <div class="feature-desc">Access legal information and understand your rights without specialized knowledge.</div>
+                            </div>
+                        </li>
+                        <li class="feature-item">
+                            <div class="feature-icon">
+                                <i class="fas fa-building"></i>
+                            </div>
+                            <div class="feature-content">
+                                <div class="feature-title">Government Officials</div>
+                                <div class="feature-desc">Quickly find applicable laws and procedures for specific scenarios in public service.</div>
+                            </div>
+                        </li>
+                        <li class="feature-item">
+                            <div class="feature-icon">
+                                <i class="fas fa-briefcase"></i>
+                            </div>
+                            <div class="feature-content">
+                                <div class="feature-title">Legal Professionals</div>
+                                <div class="feature-desc">Use as a research aid to quickly find relevant legal provisions and case references.</div>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="modal-footer">
+                <button class="btn btn-secondary" id="modal-close-btn">Close</button>
+                <button class="btn btn-primary">Get Started</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- CHAT APPLICATION -->
+    <div class="app-container" id="chat-app">
+        <div class="chat-container">
+            <!-- Sidebar -->
+            <div class="sidebar" id="sidebar">
+                <div class="sidebar-header">
+                    <div class="sidebar-logo">
+                        <i class="fas fa-scale-balanced"></i>
+                        <span>Cyber Mitra</span>
+                    </div>
+                </div>
+                
+                <button class="new-chat-btn">
+                    <i class="fas fa-plus"></i>
+                    <span>New Conversation</span>
+                </button>
+                
+                <div class="chat-history" id="chat-history">
+                    <!-- Chat history will be generated dynamically -->
+                </div>
+                
+                <div class="user-profile">
+                    <div class="user-avatar">JD</div>
+                    <div class="user-info">
+                        <div class="user-name">John Doe</div>
+                        <div class="user-status">Premium</div>
+                    </div>
+                    <i class="fas fa-cog"></i>
+                </div>
+            </div>
+            
+            <!-- Main Chat Area -->
+            <div class="main-chat">
+                <div class="chat-header">
+                    <div class="chat-title-container">
+                        <button class="menu-toggle" id="menu-toggle">
+                            <i class="fas fa-bars"></i>
+                        </button>
+                        <h2 class="chat-title-text">Welcome to Cyber Mitra</h2>
+                    </div>
+                    <div class="chat-actions">
+                        <button class="action-btn" title="Search">
+                            <i class="fas fa-search"></i>
+                        </button>
+                        <button class="action-btn" title="Dark Mode" id="dark-mode-toggle">
+                            <i class="fas fa-moon"></i>
+                        </button>
+                        <button class="action-btn" title="More Options">
+                            <i class="fas fa-ellipsis-v"></i>
+                        </button>
+                    </div>
+                </div>
+                
+                <!-- Welcome Screen (shown when no chat is selected) -->
+                <div class="welcome-container" id="welcome-screen">
+                    <div class="welcome-icon">
+                        <i class="fas fa-scale-balanced"></i>
+                    </div>
+                    <h1 class="welcome-title">Welcome to Cyber Mitra</h1>
+                    <p class="welcome-text">
+                        Your AI-powered legal assistant is ready to help you understand legal procedures and find relevant laws through natural conversation. Ask any legal question to get started.
+                    </p>
+                    <button class="btn btn-primary" id="start-new-chat">
+                        <i class="fas fa-comment"></i>
+                        Start New Chat
+                    </button>
+                    
+                    <div class="features-grid">
+                        <div class="feature-card">
+                            <div class="feature-icon">
+                                <i class="fas fa-balance-scale"></i>
+                            </div>
+                            <h3 class="feature-title">Legal Guidance</h3>
+                            <p class="feature-desc">Get instant answers to your legal questions with accurate citations and explanations.</p>
+                        </div>
+                        <div class="feature-card">
+                            <div class="feature-icon">
+                                <i class="fas fa-search"></i>
+                            </div>
+                            <h3 class="feature-title">Web Search Integration</h3>
+                            <p class="feature-desc">Access the latest legal information with integrated web search functionality.</p>
+                        </div>
+                        <div class="feature-card">
+                            <div class="feature-icon">
+                                <i class="fas fa-history"></i>
+                            </div>
+                            <h3 class="feature-title">Conversation History</h3>
+                            <p class="feature-desc">Save and revisit your legal inquiries anytime with organized chat history.</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Messages Container (hidden initially) -->
+                <div class="messages-container" id="messages-container" style="display: none;">
+                    <!-- Messages will be generated dynamically -->
+                </div>
+                
+                <!-- Chat Input (hidden initially) -->
+                <div class="chat-input-container" id="chat-input-container" style="display: none;">
+                    <div class="input-actions">
+                        <div class="action-chip" id="web-search-btn">
+                            <i class="fas fa-globe"></i>
+                            <span>Web Search</span>
+                        </div>
+                    </div>
+                    <div class="chat-input-wrapper">
+                        <textarea class="chat-input" id="message-input" placeholder="Type your legal question here..." rows="1"></textarea>
+                        <div class="input-actions-right">
+                            <label for="file-upload" class="input-action-btn" title="Attach">
+                                <i class="fas fa-paperclip"></i>
+                                <input type="file" id="file-upload" style="display: none;">
+                            </label>
+                            <button class="input-action-btn" title="Voice Input">
+                                <i class="fas fa-microphone"></i>
+                            </button>
+                            <button class="input-action-btn send-btn" id="send-message" title="Send">
+                                <i class="fas fa-paper-plane"></i>
+                            </button>
+                        </div>
+                    </div>
+                    <div class="file-preview" id="file-preview" style="display: none;">
+                        <div class="file-info">
+                            <i class="fas fa-file-alt"></i>
+                            <span id="file-name">filename.pdf</span>
+                        </div>
+                        <button class="remove-file" id="remove-file">
+                            <i class="fas fa-times"></i>
+                        </button>
+                    </div>
+                    <div class="typing-indicator" id="typing-indicator">
+                        <span>Cyber Mitra is typing</span>
+                        <div class="typing-dots">
+                            <div class="typing-dot"></div>
+                            <div class="typing-dot"></div>
+                            <div class="typing-dot"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- JavaScript Files -->
+    <script src="{{ url_for('static', filename='assets/js/auth.js') }}"></script>
+    <script src="{{ url_for('static', filename='assets/js/chat.js') }}"></script>
+    <script src="{{ url_for('static', filename='assets/js/ui.js') }}"></script>
+    <script src="{{ url_for('static', filename='assets/js/app.js') }}"></script>
+    
+    <!-- Added JavaScript for toggle between login and signup -->
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const loginTab = document.getElementById('login-tab');
+            const signupTab = document.getElementById('signup-tab');
+            const loginForm = document.getElementById('login-form');
+            const signupForm = document.getElementById('signup-form');
+            
+            if (loginTab && signupTab && loginForm && signupForm) {
+                loginTab.addEventListener('click', function() {
+                    loginTab.classList.add('active');
+                    signupTab.classList.remove('active');
+                    loginForm.style.display = 'block';
+                    signupForm.style.display = 'none';
+                });
+                
+                signupTab.addEventListener('click', function() {
+                    signupTab.classList.add('active');
+                    loginTab.classList.remove('active');
+                    signupForm.style.display = 'block';
+                    loginForm.style.display = 'none';
+                });
+            }
+        });
+    </script>
+</body>
+</html>
