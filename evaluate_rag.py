@@ -358,11 +358,26 @@ def run_evaluation(faiss_index_dir, embedding_model_name, ollama_model_name):
     
     # OPTION 1: Use domain-specific test queries that users might ask
     test_queries = [
-        "What is the statute of limitations for personal injury claims?",
-        "Explain how divorce proceedings work in family court.",
-        "What are my rights if I'm stopped by the police?",
-        "How do I file a small claims lawsuit?",
-        "What is the difference between a felony and a misdemeanor?"
+        """Mrs. Devi, a small business owner, receives an email supposedly from a 
+government department (e.g., GST office) asking her to update her business registration 
+details by clicking a link. The link leads to a professional-looking but fake website. 
+Believing it's genuine, she enters her business registration number, PAN, and other 
+sensitive details. Later, she finds that someone has used these details to apply for 
+fraudulent loans in her business's name. """,
+"""Mr. Khan uses a popular online shopping portal. One day, he receives an 
+SMS from an unknown number stating that his recent order has been cancelled and 
+asks him to call a specific number for a refund. When he calls, the person on the other 
+end asks for his debit card details, claiming it's for the refund process. He suspects his 
+data from the shopping portal might have been compromised.""",
+""" Mr. Rao, a freelancer, uses a public Wi-Fi network at a cafe. Unbeknownst to 
+him, his system is compromised. Later, he discovers that a significant amount of money 
+has been transferred from his e-wallet to an unknown account, and he receives an SMS 
+notification for an OTP he never initiated or shared. The transaction was digitally signed 
+or authenticated using an OTP he didn't provide.""",
+""" A budding photographer, Aisha, uploads her original landscape photographs 
+to her personal website. She later discovers that a well-known travel agency has 
+downloaded her photos and is using them on their commercial website and social media 
+without her permission or credit, essentially claiming them as their own."""
         # Add more domain-specific queries here
     ]
     

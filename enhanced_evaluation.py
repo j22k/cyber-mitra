@@ -259,7 +259,7 @@ def analyze_rag_evaluation(results_file: str):
 
 if __name__ == "__main__":
     # Update with your results file
-    results_file = "rag_evaluation_results_20250521_183754.json"
+    results_file = "rag_evaluation_results_20250522_094707.json"
     
     # Run analysis
     analysis = analyze_rag_evaluation(results_file)

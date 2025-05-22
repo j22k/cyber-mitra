@@ -17,5 +17,5 @@ venv/
 .idea/
 
 # Project specific
-rag_evaluation_charts.png
-rag_evaluation_report.md
+# rag_evaluation_charts.png
+# rag_evaluation_report.md

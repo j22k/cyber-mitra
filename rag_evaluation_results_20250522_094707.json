@@ -1,0 +1,66 @@
+{
+  "aggregate_metrics": {
+    "retrieval_precision": 1.0,
+    "retrieval_recall": 0.8,
+    "answer_relevance": 0.8873101206991985,
+    "answer_correctness": 0.8873101206991985,
+    "answer_completeness": 0.0,
+    "rouge_l_f1": 0.3447645783219858,
+    "latency_seconds": 35.64049525,
+    "source_count": 4.0
+  },
+  "individual_results": [
+    {
+      "query": "Mrs. Devi, a small business owner, receives an email supposedly from a \ngovernment department (e.g., GST office) asking her to update her business registration \ndetails by clicking a link. The link leads to a professional-looking but fake website. \nBelieving it's genuine, she enters her business registration number, PAN, and other \nsensitive details. Later, she finds that someone has used these details to apply for \nfraudulent loans in her business's name. ",
+      "metrics": {
+        "retrieval_precision": 1.0,
+        "retrieval_recall": 0.8,
+        "answer_relevance": 0.909820503180247,
+        "answer_correctness": 0.909820503180247,
+        "answer_completeness": 0.0,
+        "rouge_l_f1": 0.35913312693498456,
+        "latency_seconds": 40.164554,
+        "source_count": 4
+      }
+    },
+    {
+      "query": "Mr. Khan uses a popular online shopping portal. One day, he receives an \nSMS from an unknown number stating that his recent order has been cancelled and \nasks him to call a specific number for a refund. When he calls, the person on the other \nend asks for his debit card details, claiming it's for the refund process. He suspects his \ndata from the shopping portal might have been compromised.",
+      "metrics": {
+        "retrieval_precision": 1.0,
+        "retrieval_recall": 0.8,
+        "answer_relevance": 0.9189769697618392,
+        "answer_correctness": 0.9189769697618392,
+        "answer_completeness": 0.0,
+        "rouge_l_f1": 0.3679245283018868,
+        "latency_seconds": 28.883989,
+        "source_count": 4
+      }
+    },
+    {
+      "query": " Mr. Rao, a freelancer, uses a public Wi-Fi network at a cafe. Unbeknownst to \nhim, his system is compromised. Later, he discovers that a significant amount of money \nhas been transferred from his e-wallet to an unknown account, and he receives an SMS \nnotification for an OTP he never initiated or shared. The transaction was digitally signed \nor authenticated using an OTP he didn't provide.",
+      "metrics": {
+        "retrieval_precision": 1.0,
+        "retrieval_recall": 0.8,
+        "answer_relevance": 0.7730601999547762,
+        "answer_correctness": 0.7730601999547762,
+        "answer_completeness": 0.0,
+        "rouge_l_f1": 0.29515418502202645,
+        "latency_seconds": 33.396153,
+        "source_count": 4
+      }
+    },
+    {
+      "query": " A budding photographer, Aisha, uploads her original landscape photographs \nto her personal website. She later discovers that a well-known travel agency has \ndownloaded her photos and is using them on their commercial website and social media \nwithout her permission or credit, essentially claiming them as their own.",
+      "metrics": {
+        "retrieval_precision": 1.0,
+        "retrieval_recall": 0.8,
+        "answer_relevance": 0.9473828098999314,
+        "answer_correctness": 0.9473828098999314,
+        "answer_completeness": 0.0,
+        "rouge_l_f1": 0.3568464730290456,
+        "latency_seconds": 40.117285,
+        "source_count": 4
+      }
+    }
+  ]
+}
